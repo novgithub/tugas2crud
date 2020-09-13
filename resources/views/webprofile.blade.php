@@ -21,6 +21,7 @@
 					<li><a href="">Home</a></li>
 					<li><a href="#main">About me</a></li>
 					<li><a href="#share">Sharing</a></li>
+					<li><a href="#model">Model List</a></li>
 				</ul>
 			</nav>
 

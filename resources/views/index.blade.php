@@ -101,4 +101,46 @@
 						</div>
 					</section>
 			</div>
+
+<div id="model">
+<section class="wrapper style1">
+<div class="inner">
+	<header class="align-center">
+		<h2>Model List</h2>
+		<p>Berikut top list of fashion blogger</p>
+	</header>
+
+	<table class="table table-dark">
+	<thead>
+	<tr>
+		<th scope="col">#</th>
+		<th scope="col">Name</th>
+		<th scope="col">Sosmed</th>
+		<th scope="col">Information</th>
+		<th scope="col">Action</th>	
+	</tr>
+	</thead>
+	<tbody>
+	@foreach( $model as $ml)
+	<tr>
+		<th scope="row">{{ $loop->iteration }}</th>
+		<td>{{ $ml->name }}</td>
+		<td>{{ $ml->sosmed }}</td>
+		<td>{{ $ml->information }}</td>
+		<td>
+			<a href="badge badge-success">edit</a>
+			<a href="badge badge-danger">delete</a>
+		</td>
+	</tr>
+	@endforeach
+	</tbody>
+	
+	
+	
+	</table>
+
+</div>
+</section>
+</div>
+
 @stop
