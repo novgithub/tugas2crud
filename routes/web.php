@@ -21,6 +21,16 @@
 // });
 
 Route:: get('/', 'PagesController@index');
+Route:: get('/layouts/create', 'PagesController@create');
+Route:: post('/layouts/create', 'PagesController@store');
+Route:: get('destroy/{id}','PagesController@destroy');
+Route:: get('/{id}/edit', 'PagesController@edit');
+Route:: patch('/{id}', 'PagesController@update');
+
+//Route:: resource('/' , 'PagesController');
+
+//Route::delete('/{$model}' , 'PagesController@destroy');
+
 //Route:: get('/about', 'PagesController@about');
 
 //Route:: get('/anything', 'AnythingController@index');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blogger;
+
 
 class AnythingController extends Controller
 {
@@ -13,7 +15,8 @@ class AnythingController extends Controller
      */
     public function index()
     {
-        return view('anything.index');
+        $model = Blogger::all();
+        return view('index' , ['model' => $model]);
     }
 
     /**
@@ -23,7 +26,7 @@ class AnythingController extends Controller
      */
     public function create()
     {
-        //
+        return view('layout.create');
     }
 
     /**

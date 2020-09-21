@@ -21,7 +21,7 @@
 								<div class="flex flex-2">
 									<div class="col col1">
 										<div class="image round fit">
-											<a href="generic.html" class="link"><img src="images/akuu.jpg" alt="" /></a>
+											<a href="" class="link"><img src="images/akuu.jpg" alt="" /></a>
 										</div>
 									</div>
 									<div class="col col2">
@@ -108,6 +108,14 @@
 	<header class="align-center">
 		<h2>Model List</h2>
 		<p>Berikut top list of fashion blogger</p>
+
+		<a href="/layouts/create" class="tombol" style="background:#09bde6">Add New</a>
+		
+		@if (session('status'))
+		<div class="alert alert-success">
+			{{ session('status') }}
+		</div>
+		@endif
 	</header>
 
 	<table class="table table-dark">
@@ -128,8 +136,16 @@
 		<td>{{ $ml->sosmed }}</td>
 		<td>{{ $ml->information }}</td>
 		<td>
-			<a href="badge badge-success">edit</a>
-			<a href="badge badge-danger">delete</a>
+
+				<a href="{{ $ml->id }}/edit" class="tombol" style="background:#02db38">edit</a>
+			<hr>
+			<!--<form action="{{ $ml->id }}" class="d-inline">
+					-->
+				<a href="/destroy/{{ $ml->id }}" class="tombol" style="background:#eb4034">del</a>
+				@csrf
+		<!--	</form>-->
+		<!--	<a href="badge badge-success">edit</a>
+			<a href="badge badge-danger">delete</a>-->
 		</td>
 	</tr>
 	@endforeach
